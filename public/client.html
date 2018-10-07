@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Client</title>
+</head>
+<body>
+    <h1>Client streaming</h1>
+    <img id = "streaming">
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      (function (d, io){
+          'use strict'
+
+          var io = io();
+
+          io.on('play stream 2', function (image){
+              d.querySelector('#streaming').src = image
+
+          })
+
+      })(document, io)
+    </script>
+</body>
+</html
