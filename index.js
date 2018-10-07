@@ -89,7 +89,7 @@ const server = webcam.createHTTPStreamingServer({
   //  '/list_webcams': (req, res, reqUrl) => { res.end('<html>...</html>'); }
   //},
   encoder: encoder
-}).listen(8080);
+}).listen(80);
  
 /* Returns a promise that resolves to the video stream (stream.Readable) */
 const videoStream = webcam.streamWebcam('/dev/video0', encoder);
