@@ -2,7 +2,7 @@
 
 var app = require('express')(),
 	http = require('http').createServer(app),
-	io = require('socket.io')(http),
+	//io = require('socket.io')(http),
 	port = process.env.PORT || 80,
 	publicDir = `${__dirname}/public`
 
@@ -12,15 +12,15 @@ http.listen(port, () => {
 
 app
 	.get('/', (req, res) => {
-		res.sendFile(`${publicDir}/client.html`)
+		res.sendFile(`${publicDir}/client1.html`)
 	})
 	.get('/streaming', (req, res) => {
 		res.sendFile(`${publicDir}/server.html`)		
 	})
 
-io.on('connection', (socket) => {
+/*io.on('connection', (socket) => {
 	socket.on('streaming', (image) => {
 		io.emit('play stream', image)
 		//console.log(image)
 	})	
-})
+})*/
