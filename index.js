@@ -12,7 +12,7 @@ http.listen(port, () => {
 
 app
 	.get('/', (req, res) => {
-		res.sendFile(`${publicDir}/client1.html`)
+		res.sendFile(`${publicDir}/client.html`)
 	})
 	.get('/streaming', (req, res) => {
 		res.sendFile(`${publicDir}/server.html`)		
