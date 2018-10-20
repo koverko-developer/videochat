@@ -18,9 +18,9 @@ app
 		res.sendFile(`${publicDir}/server.html`)		
 	})
 
-/*io.on('connection', (socket) => {
+io.on('connection', (socket) => {
 	socket.on('streaming', (image) => {
 		io.emit('play stream', image)
 		//console.log(image)
 	})	
-})*/
+})
