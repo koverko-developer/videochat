@@ -2,7 +2,7 @@
 
 var app = require('express')(),
 	http = require('http').createServer(app),
-	//io = require('socket.io')(http),
+	io = require('socket.io')(http),
 	port = process.env.PORT || 80,
 	publicDir = `${__dirname}/public`
 
